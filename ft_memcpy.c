@@ -30,21 +30,15 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 /*
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 
-int main(void)
-{
-    const char *cp = "Bilgisayar&Programlama";
-    char dest[40];
-
-    ft_memset(dest, '1', 40);
-    ft_memcpy(dest, cp, 40);
-    printf("%s\n", dest);
-
-    ft_memset(dest, '1', 40);
-    ft_memcpy(dest, cp, 40);
-    printf("%s", dest);
-
-    return 0;
+int main () {
+   const char src[50] = "cprogramlama";
+   char dest[50];
+   strcpy(dest,"Heloooo!!\n");
+   printf("Once memcpy dest = %s\n", dest);
+   memcpy(dest, src, strlen(src)+1);
+   printf("Sonra memcpy dest = %s\n", dest);
+   
+   return(0);
 }
 */

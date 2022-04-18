@@ -39,8 +39,6 @@ char	*ft_itoa(int n)
 		*(--r) = '-';
 	return (r);
 }
-
-
 /*
 c dilinde bir integer'ı ascii'ye çeviren fonksiyon. 
 stdlib.h'ta vardır visual c'de.

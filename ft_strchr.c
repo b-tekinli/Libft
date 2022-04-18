@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 	else
 		return (0);
 }
-// Stringin belli karakterinden sonraki kasma alıyor.
+// Stringin belli karakterinden sonraki kısmı alıyor.
 /*char	*ft_strchr(const char *s, int c)
 {
 	int		i;
@@ -45,12 +45,12 @@ char	*ft_strchr(const char *s, int c)
 
 int main(void)
 {
-    const char dizi[] = "Bilgisayar";
+    const char dizi[] = "beyza";
     char *ret;
 
-    ret = strchr(dizi, 's');
+    ret = strchr(dizi, 'z');
 
-    printf("Bulunan karakterden itibaren dizi içeriği: %s", ret);
+    printf("dizi içeriği: %s", ret);
 
     return 0;
 }

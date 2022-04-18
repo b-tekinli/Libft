@@ -45,7 +45,7 @@ int	ft_atoi(const char *str)
 		return (0);
 	return (-1);
 }
-// stringi integer a çevirir
+// stringi integer'a çevirir
 /*
 #include <stdio.h>
 int main(void)

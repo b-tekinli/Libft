@@ -26,4 +26,4 @@ char	*ft_strdup(const char *s1)
 		str1[i] = s1[i];
 	return (str1);
 }
-// Stringin yerini pointere verir.
+// Stringin yerini pointera verir.

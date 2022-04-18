@@ -31,6 +31,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 int main(){
 	char a[] = "beyza";
 
-	printf("%s", ft_memchr(a,'y',4));
+	printf("%s", ft_memchr(a,'y', 4));
 	return 0;
-}*/
+}
+*/

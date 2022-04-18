@@ -27,8 +27,7 @@ char	*ft_strrchr(const char *src, int c)
 #include <stdio.h>
 #include <string.h>
 
-int main( void )
-{
+int main(void) {
     const char dizi[] = "Bilgisayar";
     char cd = 'i';
     char *ret;

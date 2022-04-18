@@ -23,4 +23,4 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-// bir dizgenin her karakterine bir işlev uygular.
+// bir dizinin her karakterine bir işlev uygular.

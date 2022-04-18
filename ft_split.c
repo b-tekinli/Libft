@@ -79,4 +79,4 @@ char	**ft_split(char const *s, char c)
 	buff[i] = 0;
 	return (buff);
 }
-// String kelimelere ayırmak için kullanılır.
+// listeyi belirtilen ayıracı kullanarak yeniden döndürür. Karakter dizilerini istenen şekilde böler.

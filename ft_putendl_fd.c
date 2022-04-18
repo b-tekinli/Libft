@@ -23,13 +23,3 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, &nl, 1);
 }
 // Hem uzunluk kadar yazdırır hem de alt satıra geçer.
-/*
-#include <stdio.h>
-int main(){
-
-	char a[] = "kirk iki";
-
-	ft_putendl_fd(a,2);
-	return 0;
-}
-*/

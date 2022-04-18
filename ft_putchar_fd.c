@@ -16,4 +16,16 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, sizeof(char));
 }
-// belirtilen dosyaya putchar gönderiyor.
+// Ekrana tek bir karakter yazar. Belirtilen dosyaya putchar gönderiyor.
+/*
+#include <stdio.h>
+int main () {
+   char ch;
+
+   for(ch = 'A' ; ch <= 'Z' ; ch++) {
+      putchar(ch);
+   }
+   
+   return(0);
+}
+*/
