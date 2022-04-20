@@ -1,7 +1,7 @@
 # Libft
 42-Cursus
 
-computer: Libft
+:computer: Libft
 
 ### Fonksiyonlar <ctype.h> <br /> 
 ➡️ Karakterleri türlerine göre sınıflandırmak veya büyük ve küçük harflere çevirmek için kullanılan fonksiyonları içerir. <br /> <br />
