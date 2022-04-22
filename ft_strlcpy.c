@@ -14,26 +14,30 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
+	size_t	srclen;
+	size_t	len;
 
-	i = 0;
-	if (!src || !dst)
-		return (0);
-	if (dstsize == 0)
+	srclen = ft_strlen(src);
+	if (dstsize)
 	{
-		while (src[i])
-			i++;
-		return (i);
+		if (srclen >= dstsize)
+			len = dstsize - 1;
+		else
+			len = srclen;
+		ft_memcpy(dst, src, len);
+		dst[len] = '\0';
 	}
-	while (i < dstsize - 1 && src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (i < dstsize)
-		dst[i] = '\0';
-	while (src[i] != '\0')
-		i++;
-	return (i);
+	return (srclen);
 }
-// String kopyalar.
+// sc'den dst'e kadar kopyalar src'nin uzunluğunu return eder
+
+/*
+#include<stdio.h>
+int main()
+{
+    char    a[] = "beyza" ;
+    char    b[] = "42";
+    printf("%zu\n", ft_strlcpy(a, b, 5));
+    printf("%s\n", a);
+}
+*/
