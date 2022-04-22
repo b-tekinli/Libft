@@ -14,16 +14,21 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*str1;
-	size_t	i;
+	size_t	len;
+	void	*new;
 
-	i = ft_strlen(s1);
-	str1 = (char *)malloc(sizeof(char) * i + 1);
-	if (!str1)
-		return (str1);
-	str1[i] = 0;
-	while (i--)
-		str1[i] = s1[i];
-	return (str1);
+	len = ft_strlen(s1) + 1;
+	new = malloc(len);
+	if (new == NULL)
+		return (NULL);
+	return ((char *) ft_memcpy(new, s1, len));
 }
-// Stringin yerini pointera verir.
+// yeni bir dizin açıp onun uzunluğu kadar mallocla yer ayırıp oraya kopyalar
+/*
+#include <stdio.h>
+int	main()
+{
+	char c[] = "beyza";
+	printf("%s", ft_strdup(c));
+}
+*/
