@@ -28,22 +28,12 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (memory);
 }
-/*
 // belleği ayırır ve bayt değerlerini 0 ile doldurur.
-
+/*
 #include <stdio.h>
 
-int main(void) {
-
-	int *a, b;
-
-	a = (int *) ft_calloc(10, sizeof(int));
-
-	for(b=0; b<12; b++) {
-		*(a + b) = (b + 1) * 8;
-		printf("%p adresindeki değer: %d\n", (a+b), *(a+b));
-	}
-
-	free(a);
+int	main()
+{
+	printf("%p", ft_calloc(10, 30));
 }
 */
