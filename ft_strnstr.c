@@ -12,23 +12,37 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
+	size_t	h;
+	size_t	n;
 
-	if (!*s2)
-		return ((char *)s1);
-	while (*s1 && n-- >= ft_strlen(s2))
+	h = 0;
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	while (haystack[h] != '\0')
 	{
-		i = 0;
-		while (s2[i] == s1[i])
+		n = 0;
+		while (haystack[h + n] == needle[n] && (h + n) < len)
 		{
-			i++;
-			if (!s2[i])
-				return ((char *)(s1));
+			if (haystack[h + n] == '\0' && needle[n] == '\0')
+				return ((char *)&haystack[h]);
+			n++;
 		}
-		s1++;
+		if (needle[n] == '\0')
+			return ((char *)haystack + h);
+		h++;
 	}
-	return (NULL);
+	return (0);
 }
-// iki diziyi karşılaştırır.
+// haystack içinde len kadar needle ı arar bulunca geri kalanı döndürür
+/*
+#include <stdio.h>
+
+int main() {
+	char a[] = "beyza";
+	char b[] = "ey";
+	printf("%s", ft_strnstr(a, b, 5));
+	return 0;
+}
+*/
