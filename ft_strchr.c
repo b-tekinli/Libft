@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: btekinli <42istanbul.com.tr>               +#+  +:+       +#+        */
+/*   By: btekinli <btekinli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/08 18:38:02 by btekinli          #+#    #+#             */
-/*   Updated: 2022/01/08 18:38:03 by btekinli         ###   ########.fr       */
+/*   Created: 2022/02/18 11:30:51 by btekinli          #+#    #+#             */
+/*   Updated: 2022/04/20 14:52:12 by btekinli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -18,40 +20,15 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (*s == (char)c)
-		return ((char *)s);
-	else
-		return (0);
-}
-// Stringin belli karakterinden sonraki kısmı alıyor.
-/*char	*ft_strchr(const char *s, int c)
-{
-	int		i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i++;
-	}
-	if (s[i] == (char)c)
-		return ((char *)&s[i]);
 	return (0);
-}*/
+}
+// s stringinin içinde c yi bulup geri kalan stringi return eder
 /*
 #include <stdio.h>
-#include <string.h>
 
-int main(void)
-{
-    const char dizi[] = "beyza";
-    char *ret;
-
-    ret = strchr(dizi, 'z');
-
-    printf("dizi içeriği: %s", ret);
-
-    return 0;
+int main() {
+	const char s[] = "beyza";
+	printf("%s", ft_strchr(s, 'z'));
+	return 0;
 }
 */

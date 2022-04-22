@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft _isdigit.c                                      :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: btekinli <btekinli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/03 14:56:21 by btekinli          #+#    #+#             */
-/*   Updated: 2022/01/03 14:56:36 by btekinli         ###   ########.fr       */
+/*   Created: 2022/02/18 11:30:51 by btekinli          #+#    #+#             */
+/*   Updated: 2022/04/20 14:53:23 by btekinli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isdigit(int c)
 {
-	return (c >= 48 && c <= 57);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
+// rakam olup olmadığını gösterir
 /*
 #include <stdio.h>
-#include <ctype.h>
 
-int main(void) {
-    char c1 = '3', c3 = 'M';
+int main() {
 
-    printf("%c bir rakam%s\n", c1, isdigit(c1) ? "dır!" : " değildir!");
-    printf("%c bir rakam%s", c3, isdigit(c3) ? "dır!" : " değildir!");
-
-    return 0;
+	printf("%d", ft_isdigit('2'));
 }
 */
-// sayı olduğunu gösterir

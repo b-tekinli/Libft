@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: btekinli <btekinli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 16:21:54 by btekinli          #+#    #+#             */
-/*   Updated: 2022/02/10 14:54:59 by btekinli         ###   ########.fr       */
+/*   Created: 2022/02/18 11:30:51 by btekinli          #+#    #+#             */
+/*   Updated: 2022/04/20 16:05:31 by btekinli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,14 @@ void ft_bzero(void *s, size_t n)
 	while (n--)
 		*(char *)s++ = 0;
 }
-
-
+// bayt dizesini sıfırlar
 /*
-kullanımdan kaldırıldı memset kullanılıyor
-ft_memset(s, '\0', 2);
-// bir bayt dizesini sıfırlayın.
+#include <stdio.h>
+
+int main() {
+	char b[] = "beyza";
+	ft_bzero(b, 0);
+	printf("%s", b);
+	return 0;
+}
 */

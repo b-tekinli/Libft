@@ -5,26 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: btekinli <btekinli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/04 11:16:53 by btekinli          #+#    #+#             */
-/*   Updated: 2022/01/04 11:18:44 by btekinli         ###   ########.fr       */
+/*   Created: 2022/02/18 11:30:51 by btekinli          #+#    #+#             */
+/*   Updated: 2022/04/20 14:53:26 by btekinli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
+// ascii karakteri mi değil mi diye kontrol eder
 /*
 #include <stdio.h>
-#include <ctype.h>
 
-int main(void) {
-    char c1 = 'h', c2 = '&';
+int main() {
 
-    printf("%c ascii karakteri %s\n", c1, isalpha(c1) ? "dir!" : "değildir!");
-    printf("%c ascii karakteri %s\n", c2, isalpha(c2) ? "dir!" : "değildir!");
-
-    return 0;
+	printf("%d", ft_isascii('b'));
 }
 */
-// ascii karakteri mi değil mi

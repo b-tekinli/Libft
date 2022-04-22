@@ -5,34 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: btekinli <btekinli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/04 11:22:46 by btekinli          #+#    #+#             */
-/*   Updated: 2022/01/09 18:15:40 by btekinli         ###   ########.fr       */
+/*   Created: 2022/02/18 11:30:51 by btekinli          #+#    #+#             */
+/*   Updated: 2022/04/20 14:51:45 by btekinli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *c)
+size_t	ft_strlen(const char *str)
 {
-	size_t	a;
+	size_t	i;
 
-	a = 0;
-	while (c[a])
-		a++;
-	return (a);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
-// String uzunluğunu verir.
+// string uzunluğunu verir
 /*
 #include <stdio.h>
-#include <string.h>
-int main(void) {
-	const char *comp = "beyza";
-	int b;
 
-	b = ft_strlen(comp);
-
-	printf("%s karakter dizisinin uzunluğu: %d\n", comp, b);
-
-	return (0);
+int main() {
+	char *b = "beyza";
+	int a = ft_strlen(b);
+	printf("%d", a);
 }
 */

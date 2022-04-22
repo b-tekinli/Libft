@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: btekinli <btekinli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/04 13:41:26 by btekinli          #+#    #+#             */
-/*   Updated: 2022/01/13 14:01:17 by btekinli         ###   ########.fr       */
+/*   Created: 2022/02/18 11:30:51 by btekinli          #+#    #+#             */
+/*   Updated: 2022/04/20 14:52:37 by btekinli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			*d++ = *s++;
 	return (dst);
 }
-// hafıza alanının istediğimiz kadarını kopyalar.
+// hafıza alanının istediğimiz kadarını kopyalar
 /*
 #include <stdio.h>
 
-int main()
-{
+int main() {
 	char str[] = "beyza";
-
-	char *s = ft_memmove(str + 3, str, 2);
+	ft_memmove(str + 3, str, 2);
 	printf("%s", str);
+	return 0;
 }
 */

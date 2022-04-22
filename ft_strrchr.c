@@ -5,37 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: btekinli <btekinli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/08 19:10:22 by btekinli          #+#    #+#             */
-/*   Updated: 2022/01/09 18:15:40 by btekinli         ###   ########.fr       */
+/*   Created: 2022/02/18 11:30:51 by btekinli          #+#    #+#             */
+/*   Updated: 2022/04/20 14:51:30 by btekinli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *src, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (!ft_strchr(src, (char)c))
-		return (0);
-	while (*src)
-		src++;
-	while (*src != (char)c)
-		src--;
-	return ((char *)src);
+	char	*start;
+
+	start = (char *)s;
+	while (*s)
+		s++;
+	while (s >= start)
+	{
+		if (*((char *)s) == (char)c)
+			return ((char *)s);
+		s--;
+	}
+	return (NULL);
 }
-// dizedeki karakteri bulun.
+// strchr nin tersten karakter bulan hali
 /*
 #include <stdio.h>
-#include <string.h>
 
-int main(void) {
-    const char dizi[] = "Bilgisayar";
-    char cd = 'i';
-    char *ret;
-
-    ret = strrchr(dizi, cd);
-
-    printf("Bulunan son %c karakterinden itibaren dizi içeriği: %s", cd, ret);
-
-    return 0;
+int main() {
+	const char s[] = "ingilizce";
+	printf("%s", ft_strrchr(s, 'i'));
 }
 */

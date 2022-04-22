@@ -5,57 +5,45 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: btekinli <btekinli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 16:21:26 by btekinli          #+#    #+#             */
-/*   Updated: 2022/02/10 15:37:46 by btekinli         ###   ########.fr       */
+/*   Created: 2022/02/18 11:30:51 by btekinli          #+#    #+#             */
+/*   Updated: 2022/04/20 15:24:36 by btekinli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	int	ft_isspace(int c)
-{
-	if (c == ' ' || c == '\r' || c == '\f' || c == '\v'
-		|| c == '\n' || c == '\t')
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
+	int		i;
 	int		sign;
 	long	res;
 
-	res = 0;
+	i = 0;
 	sign = 1;
-	while (ft_isspace(*str))
+	res = 0;
+	while (*str && ((*str >= 9 && *str <= 13) || *str == 32))
 		str++;
-	if (*str == '+' || *str == '-')
+	if (*str == '-' || *str == '+')
+		if (*str++ == '-')
+			sign = -1;
+	while (*str && (*str >= '0' && *str <= '9'))
 	{
-		if (*str == '-')
-			sign *= -1;
+		res = res * 10 + (*str - '0');
+		if (res * sign < -2147483648)
+			return (0);
+		else if (res * sign > 2147483647)
+			return (-1);
 		str++;
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		res = (res * 10) + (*str - '0');
-		str++;
-	}
-	res *= sign;
-	if (res >= -2147483648 && res <= 2147483647)
-		return (res);
-	if (sign == -1)
-		return (0);
-	return (-1);
+	return (res * sign);
 }
-// stringi integer'a çevirir
+// string i integer a çevirir
 /*
 #include <stdio.h>
-int main(void)
-{
-	char *str = "-123";
-	int c = ft_atoi(str);
 
-	// str = "-123";
-	// p = ft_atoi(str);
-	printf("%d", c);
-	return (0);
+int main() {
+	char *str = "-61";
+	printf("%d", ft_atoi(str));
+	return 0;
 }
 */

@@ -5,15 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: btekinli <btekinli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/04 11:07:41 by btekinli          #+#    #+#             */
-/*   Updated: 2022/01/06 10:46:15 by btekinli         ###   ########.fr       */
+/*   Created: 2022/02/18 11:30:51 by btekinli          #+#    #+#             */
+/*   Updated: 2022/04/20 16:15:06 by btekinli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	return (0);
 }
-// harf olduğunu gösterir
+// harf olup olmadığını kontrol eder
+/*
+#include <stdio.h>
+
+int main() {
+	printf("%d", ft_isalpha('a'));
+}
+*/

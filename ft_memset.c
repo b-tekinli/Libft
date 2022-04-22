@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: btekinli <btekinli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 16:25:21 by btekinli          #+#    #+#             */
-/*   Updated: 2022/01/10 15:57:33 by btekinli         ###   ########.fr       */
+/*   Created: 2022/02/18 11:30:51 by btekinli          #+#    #+#             */
+/*   Updated: 2022/04/20 14:52:34 by btekinli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,14 @@ void *ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-// bellekte istediğimiz kadar alanı sabit bayt ile doldurur.
+// bellekte istediğimiz kadar alanı sabit bayt ile doldurmamızı sağlar
 /*
 #include <stdio.h>
 
 int main() {
 
-	char arr[] = "kirkiki";
-	ft_memset(arr, 'x', 3);
-
-	printf("%s", arr);
-
+	char b[] = "beyza";
+	printf("%s", ft_memset(b, 120, 3));
 	return 0;
 }
 */
