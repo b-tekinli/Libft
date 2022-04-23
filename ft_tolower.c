@@ -13,20 +13,12 @@
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
-		c = c + 32;
+		c += 32;
 	return (c);
 }
 // büyük harfleri küçük harfe çevirir.
 /*
-#include <stdio.h>
-#include <ctype.h>
-
-int main(void) {
-    char c1 = 'A', c2 = 'B';
-
-    printf("%c %c\n", c1, tolower(c1));
-    printf("%c %c", c2, tolower(c2));
-
-    return 0;
-}
-*/
+int	main()
+{
+	printf("%d", ft_tolower('A'));
+}*/
