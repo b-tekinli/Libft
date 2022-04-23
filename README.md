@@ -50,12 +50,12 @@ ft_strjoin - iki dizeyi birleştirir. <br />
 ft_strtrim - belirli karakter kümesiyle dizenin başlangıcını ve sonunu keser. <br />
 ft_split - parametre olarak bir karakter kullanarak bir dizeyi böler. <br />
 ft_itoa - integer'ı ascii'ye çevirir. <br />
-ft_strmapi - bir dizgenin her karakterine bir işlev uygular. <br />
-ft_striteri - bir dizgenin her karakterine bir işlev uygular. <br />
-ft_putchar_fd - bir dosya tanıtıcısına bir karakter çıktısı. <br />
-ft_putstr_fd - bir dosya tanıtıcısına bir dize çıktısı alın. <br />
-ft_putendl_fd - dosya tanıtıcısına bir dize çıktısı alın ve ardından yeni bir satır. <br />
-ft_putnbr_fd - bir dosya tanımlayıcısına bir sayı çıktısı. <br />
+ft_strmapi - ‘f’ fonksiyonunu ‘s’ stringinin bütün karakterlerine uygular. değiştirlen stringden yeni bir string yaratılır. <br />
+ft_striteri - ‘f’ fonksiyonun stringin her karakterine uygular. eğer gerekli olursa her karakter adresi ile gönderilmelidir. <br />
+ft_putchar_fd - file descriptora ‘c’ karakterinin çıktısını yazar. <br />
+ft_putstr_fd - ‘s’ stringini verilen file descriptor içerisine yazar. <br />
+ft_putendl_fd - ‘s’ string çıktısını sonunda new line karakteri ile birlikte verilen file descriptora yazar. <br />
+ft_putnbr_fd - integer ‘n’ değerinin çıktısını verilen file descriptora yazar. <br />
 ​
 	<br />
 ### Bağlantılı Liste İşlevleri <br />
