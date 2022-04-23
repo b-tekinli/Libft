@@ -14,14 +14,21 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*last;
-
-	if (*lst)
+	if (*lst == NULL)
 	{
-		last = ft_lstlast(*lst);
-		last->next = new;
-	}
-	else
 		*lst = new;
+		return ;
+	}
+	ft_lstlast(*lst)->next = new;
 }
-// Linked Listlerde ilk elemanı sona atıyor.
+// new elemanını listenin sonuna ekler
+/*
+#include <stdio.h>
+
+int main() {
+	t_list *lst = ft_lstnew("beyza");
+	t_list *new = ft_lstnew("42");
+    ft_lstadd_back(&lst, new);
+	printf("%s", new->next->content);
+}
+*/
