@@ -31,7 +31,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-// bir dizgenin her karakterine bir işlev uygular.
+// f’ fonksiyonunu ‘s’ stringinin bütün karakterlerine uygular. Değiştirlen stringden yeni bir string yaratılır.
 /*
 char	ft_putstr(unsigned int i, char s)
 {
