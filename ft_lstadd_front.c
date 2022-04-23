@@ -14,10 +14,21 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst)
-	{
-		new->next = *lst;
-		*lst = new;
-	}
+	if (!new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
-// Linked Listlerde sonuncu elemanı en başa alıyor.
+// listenin başına yeni bir eleman ekler
+/*
+#include<stdio.h>
+
+int main()
+{
+	t_list *lst = ft_lstnew("beyza");
+	t_list *new = ft_lstnew("42");
+	ft_lstadd_front(&lst, new);
+	printf("%s\n", lst->content);
+	printf("%s", lst->next->content);
+}
+*/
