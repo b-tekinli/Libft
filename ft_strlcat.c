@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- * srcyi destin üstüne ekleme
-*/
-
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, char *src, size_t size)
@@ -42,7 +38,7 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 		dest[j] = '\0';
 	return (dlen + slen);
 }
-// İki dizeyi birleştiriyor.
+// src'yi dest'in üstüne ekler
 /*
 #include <stdio.h>
 int main()
