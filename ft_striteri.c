@@ -10,17 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int	i;
+	size_t	i;
 
+	i = 0;
 	if (!s)
 		return ;
-	i = 0;
 	while (s[i] != '\0')
 	{
 		f(i, s + i);
 		i++;
 	}
 }
-// bir dizinin her karakterine bir işlev uygular.
+/*
+void to_lower(unsigned int a, char *b)
+{
+	*b += 5;
+}
+// ‘f’ fonksiyonu stringin her karakterine uygulanır.
+#include<stdio.h>
+
+int main()
+{
+	char s[] = "ABC";
+	ft_striteri(s, to_lower);
+	printf("%s", s);
+}
+*/
