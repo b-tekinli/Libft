@@ -7,31 +7,31 @@
 ➡️ Karakterleri türlerine göre sınıflandırmak veya büyük ve küçük harflere çevirmek için kullanılan fonksiyonları içerir. <br /> <br />
 ​
 ft_isalpha - alfabetik bir karakter olup olmadığını kontrol eder. <br />
-ft_isdigit - bir rakamı (0'dan 9'a kadar) kontrol eder. <br />
+ft_isdigit - rakam olup olmadığını kontrol eder. <br />
 ft_isalnum - alfanümerik bir karakter olup olmadığını kontrol eder. <br />
 ft_isascii - c'nin ASCII karakter kümesine uyup uymadığını kontrol eder. <br />
-ft_isprint - yazdırılabilir herhangi bir karakter olup olmadığını kontrol eder. <br />
-ft_toupper - karakteri büyük harfe çevir. <br />
-ft_tolower - char'ı küçük harfe dönüştür. <br />
+ft_isprint - yazdırılabilir bir karakter olup olmadığını kontrol eder. <br />
+ft_toupper - küçük harfi büyük harfe çevir. <br />
+ft_tolower - büyük harfi küçük harfe çevir. <br />
 ​
 	<br />
 
 ### Fonksiyonlar <string.h> <br /> 
 ➡️ Karakter dizisi fonksiyonları içerir. <br /> <br />
 ​
-ft_memset - belleği sabit bir bayt ile doldurun. <br />
-ft_strlen - bir dizenin uzunluğunu hesaplamak. <br />
-ft_bzero - bir bayt dizesini sıfırlayın. <br />
-ft_memcpy - hafıza alanını kopyala. <br />
-ft_memmove - hafıza alanını kopyala. <br />
-ft_strlcpy - dizeyi belirli bir boyuta kopyala. <br />
-ft_strlcat - dizeyi belirli bir boyuta birleştir. <br />
-ft_strchr - dizedeki karakteri bulun. <br />
-ft_strrchr - dizedeki karakteri bulun. <br />
-ft_strncmp - iki dizeyi karşılaştırın. <br />
-ft_memchr - bir karakter için hafızayı tara. <br />
-ft_memcmp - hafıza alanlarını karşılaştırın. <br />
-ft_strnstr - bir dizgede bir alt dizgiyi bulun. <br />
+ft_memset - bellekte istediğimiz kadar alanı sabit bayt ile doldurmamızı sağlar <br />
+ft_strlen - bir dizenin uzunluğunu hesaplar. <br />
+ft_bzero - bir bayt dizesini sıfırlar. <br />
+ft_memcpy - hafıza alanını veri tasarruflu kopyalar. <br />
+ft_memmove - hafıza alanının istediğimiz kadarını taşır. <br />
+ft_strlcpy - 2 dizeyi de birbirine ekler fakat 2. olanın uzunluğunu return eder. <br />
+ft_strlcat - 2 dizeyi de birleştirir. <br />
+ft_strchr - dizedeki karakteri bulup geri kalan str'yi döndürür. <br />
+ft_strrchr - dizedeki karakteri tersten bulup kalanı yazdırır. <br />
+ft_strncmp - iki stringi karşılaştırıp char farkını geri döndürür. <br />
+ft_memchr - bir karakter için hafızayı tarayıp adresini döndürür. <br />
+ft_memcmp - hafıza alanlarını karşılaştırıp adreslerin ascii tablosundaki farkını alır. <br />
+ft_strnstr - 2 stringi karşıalştırıp aradığını bulduğunda geri kalanı return eder. <br />
 ft_strdup - parametre olarak iletilen dize için bir kopya oluşturur. <br />
 ​
 	<br />
@@ -39,7 +39,7 @@ ft_strdup - parametre olarak iletilen dize için bir kopya oluşturur. <br />
 ### Fonksiyonlar <stdlib.h> <br />
 ➡️ Sayısal dönüşüm, rastgele sayı üretme, bellek ayırma ve process kontrol fonksiyonları içerir. <br /> <br />
 ​
-ft_atoi - string olarak verilen sayıyı int tipine çevirir. <br />
+ft_atoi - string olarak verilen değeri int tipine çevirir. <br />
 ft_calloc - belleği ayırır ve bayt değerlerini 0 ile doldurur. <br />
 ​
 	<br />
