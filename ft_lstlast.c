@@ -14,12 +14,20 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst)
-	{
-		if (!lst->next)
-			return (lst);
+	while (lst != NULL && lst->next != NULL)
 		lst = lst->next;
-	}
 	return (lst);
 }
-// Linked Listenin sonuncu elemanını döndürür.
+// listenin son elemanını verir
+/*
+#include <stdio.h>
+
+int main() {
+	t_list *bir = ft_lstnew("bir");
+	t_list *iki = ft_lstnew("iki");
+	bir->next = iki;
+	iki->next = NULL;
+	t_list *son = ft_lstlast(bir);
+    printf("%s", son->content);
+}
+*/
