@@ -17,14 +17,13 @@ void ft_bzero(void *s, size_t n)
 	while (n--)
 		*(char *)s++ = 0;
 }
-// bayt dizesini sıfırlar
+// bayt'ı (s) n'e kadar 0 ile doldurur
 /*
 #include <stdio.h>
-
-int main() {
-	char b[] = "beyza";
-	ft_bzero(b, 0);
-	printf("%s", b);
-	return 0;
-}
-*/
+int main()
+{
+	char s[] = "beyza";
+	ft_bzero(s, 0);
+	printf("%s", s);
+	
+}*/
