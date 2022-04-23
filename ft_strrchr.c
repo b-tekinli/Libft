@@ -27,7 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-// strchr nin tersten karakter bulan hali
+// strchr'nin c'yi string'in tersinden bulan hali
 /*
 #include <stdio.h>
 
