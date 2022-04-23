@@ -14,16 +14,16 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
 	char			*str;
+	unsigned int	i;
 
-	i = 0;
 	if (!s)
-		return ((char *)s);
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
+		return (NULL);
+	str = (char *)malloc(ft_strlen(s) + 1);
 	if (!str)
-		return (str);
-	while (s[i])
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
 	{
 		str[i] = f(i, s[i]);
 		i++;
@@ -32,3 +32,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 // bir dizgenin her karakterine bir işlev uygular.
+/*
+int	my_toupper(int c)
+{
+	return c - 32;
+}
+
+#include <stdio.h>
+int main() {
+	char *b = "beyza";
+	printf("%s", ft_strmapi(b, &my_toupper));
+}
+*/
