@@ -33,9 +33,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 // bir dizgenin her karakterine bir işlev uygular.
 /*
-int	my_toupper(int c)
+char	ft_putstr(unsigned int i, char s)
 {
-	return c - 32;
+	if (i % 2 == 0)
+		return (s - 32);
+	else
+		return (s);
 }
 
 #include <stdio.h>
