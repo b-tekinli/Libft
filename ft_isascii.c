@@ -16,7 +16,7 @@ int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
-// ascii karakteri mi değil mi diye kontrol eder
+// ASCII karakter kümesine uyup uymadığını kontrol eder
 /*
 #include <stdio.h>
 
