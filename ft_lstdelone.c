@@ -12,12 +12,21 @@
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst)
-		return ;
-	if (del)
-		del (lst->content);
-	free (lst);
+	del(lst->content);
+	free(lst);
 }
-// Linked Listenin 1 elemanın hücresini boşaltıyor.
+
+/*
+void f(void *str) {
+	printf("%s", str);
+}
+
+// del f'unu kullanarak elemanın hafızadaki yerini temizler. next'in yeri temizlenmiş olmalıdır
+
+int main() {
+	t_list *bir = ft_lstnew("bir");
+	ft_lstdelone(bir, &f);
+}
+*/
