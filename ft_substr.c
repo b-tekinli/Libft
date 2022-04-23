@@ -14,18 +14,28 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
-	size_t	new_len;
+	char	*buf;
 
-	if (!s || (unsigned int)ft_strlen(s) < start || len > 2147483647)
-		return (ft_strdup(""));
-	new_len = ft_strlen(s + start);
-	if (new_len < len)
-		len = new_len;
-	substr = (char *)malloc(sizeof(char) * (len + 1));
-	if (!substr)
+	if (!s)
 		return (NULL);
-	ft_strlcpy(substr, s + start, len + 1);
-	return (substr);
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
+	if (ft_strlen(s) < start)
+		return (ft_strdup(""));
+	buf = (char *)malloc(sizeof(char) * len + 1);
+	if (!buf)
+		return (0);
+	ft_strlcpy(buf, s + start, len + 1);
+	return (buf);
 }
-// bir diziden bir alt dizi döndürür.
+// Malloc fonksiyonu kullanılarak memoryde hafıza ayırılır ve belirtilen substringi döner. 
+// Substring başlangıç indisinden başlar ve maksimum boyutuna kadar devam eder.
+/*
+#include <stdio.h>
+
+int	main()
+{
+	char c[] = "beyza";
+	printf("%s", ft_substr(c, 0, 3));
+}
+*/
