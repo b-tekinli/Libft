@@ -19,7 +19,7 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-// harf mi sayı mı diye kontrol eder
+// alfanümerik bir karakter olup olmadığını kontrol eder
 /*
 #include <stdio.h>
 
