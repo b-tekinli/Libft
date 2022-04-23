@@ -12,71 +12,77 @@
 
 #include "libft.h"
 
-int	ft_word_counter(char const *s, char c)
+size_t	ft_count_word(char const *s, char c)
 {
-	int	i;
-	int	total;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
-	total = 0;
+	count = 0;
+	while (s[i] == c && s[i])
+		i++;
 	while (s[i])
 	{
-		while (s[i] == c && s[i])
-			i++;
-		if (s[i] != c && s[i])
-			total++;
 		while (s[i] != c && s[i])
 			i++;
+		count++;
+		while (s[i] == c && s[i])
+			i++;
 	}
-	return (total);
+	return (count);
 }
 
-int	ft_letter_counter(char const *s, char c)
+char	*ft_strcreate(const char *s, char c, size_t i)
 {
-	int	i;
+	size_t	len;
+	size_t	tmp;
 
-	i = 0;
-	while (s[i] != c && s[i])
-		i++;
-	return (i);
-}
-
-char	**ft_strclean(char **buff)
-{
-	int	j;
-
-	j = 0;
-	while (buff[j])
-		free(buff[j++]);
-	free(buff);
-	return (0);
+	len = 0;
+	tmp = i;
+	while (s[tmp] != c && s[tmp])
+	{
+		tmp++;
+		len++;
+	}
+	return (ft_substr(s, i, len));
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**buff;
 	size_t	i;
+	size_t	res_i;
+	char	**res;
 
-	i = 0;
 	if (!s)
-		return (0);
-	buff = (char **)malloc(sizeof(char *) * (ft_word_counter(s, c) + 1));
-	if (!buff)
-		return (0);
-	while (*s)
+		return (NULL);
+	res = (char **)malloc((ft_count_word(s, c) + 1) * sizeof(char *));
+	if (!res)
+		return (NULL);
+	i = 0;
+	res_i = 0;
+	while (s[i])
 	{
-		while (*s && *s == c)
-			s++;
-		if (*s != c && *s)
+		while (s[i] == c && s[i])
+			i++;
+		if (s[i])
 		{
-			buff[i] = (char *)ft_substr(s, 0, ft_letter_counter(s, c));
-			if (!buff[i++])
-				return (ft_strclean(buff));
+			res[res_i] = ft_strcreate(s, c, i);
+			res_i++;
 		}
-		while (*s != c && *s)
-			s++;
+		while (s[i] != c && s[i])
+			i++;
 	}
-	buff[i] = 0;
-	return (buff);
+	res[res_i] = 0;
+	return (res);
 }
 // listeyi belirtilen ayıracı kullanarak yeniden döndürür. Karakter dizilerini istenen şekilde böler.
+/*
+#include <stdio.h>
+int	main()
+{
+	char	*str = "***beyza**42**dev";
+	char **splt;
+
+	splt = ft_split(str, '*');
+	printf("%s\n", splt[0]);
+}*/
