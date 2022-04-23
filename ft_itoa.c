@@ -12,41 +12,53 @@
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static size_t	get_digits(int n)
 {
-	char	*r;
-	int		tmp;
-	int		a;
+	size_t	count;
 
-	a = 1;
-	tmp = n;
-	while (tmp && a++)
-		tmp = tmp / 10;
-	r = (char *)malloc(sizeof(char) * ((n < 0) + a + (n == 0)));
-	if (!r)
-		return (r);
-	r = r + (n < 0) + a - 1 + (n == 0);
-	*r = '\0';
-	if (n == 0)
-		*(--r) = '0';
-	a = (n >= 0) * 2 - 1;
+	count = 0;
+	if (n < 0 || n == 0)
+		count++;
 	while (n)
 	{
-		*(--r) = (n % (10 * a)) * a + '0';
-		n = n / 10;
+		n /= 10;
+		count++;
 	}
-	if (a < 0)
-		*(--r) = '-';
-	return (r);
+	return (count);
 }
+
+char	*ft_itoa(int n)
+{
+	char		*str;
+	size_t		len;
+	const char	*digits;
+
+	digits = "0123456789";
+	len = get_digits(n);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (0);
+	str[len] = '\0';
+	if (n == 0)
+		str[0] = '0';
+	if (n < 0)
+		str[0] = '-';
+	while (n)
+	{
+		if (n > 0)
+			str[--len] = digits[n % 10];
+		else
+			str[--len] = digits[n % 10 * -1];
+		n /= 10;
+	}
+	return (str);
+}
+// integer'ı ascii'ye çevirir
 /*
-c dilinde bir integer'ı ascii'ye çeviren fonksiyon. 
-stdlib.h'ta vardır visual c'de.
-*/
-/*
-#include <stdio.h>
-int main() {
-	char arr[100];
-	printf("Taban: 16, Değer: %s", itoa(1567, arr, 16));
+int main() 
+{
+	int	c = -6;
+	printf("%s", ft_itoa(c));
+	return(0);
 }
 */
