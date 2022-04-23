@@ -17,35 +17,28 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int nb)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (nb == -2147483648)
+	unsigned int	num;
+
+	if (n < 0)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		nb = 147483648;
-	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		ft_putchar_fd('-', fd);
+		num = -n;
 	}
 	else
-	{
-		ft_putchar(nb + 48);
-	}
+		num = n;
+	if (num >= 10)
+		ft_putnbr_fd(num / 10, fd);
+	ft_putchar_fd(num % 10 + '0', fd);
 }
-//  Sayıyı 10'a bölerek ve • veya - olduğunu belirterek yazıyor.
+// integer ‘n’ değerinin çıktısını verilen file descriptora yazar
 /*
-#include <unistd.h>
-#include <stdio.h>
-int		main(void)
+#include <fcntl.h>
+int main()
 {
-	ft_putnbr(-21474);
+	int a = -12;
+	int fd = 1;
+	ft_putnbr_fd(a, fd);
 }
 */
