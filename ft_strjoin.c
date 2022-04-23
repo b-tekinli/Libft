@@ -14,23 +14,34 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	s1l;
-	size_t	s2l;
-	char	*str;
+	char	*new_str;
+	int		i;
+	int		j;
 
-	if (!s1)
-		return ((char *)s1);
-	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
-	if (!str)
-		return (str);
-	s1l = 0;
-	s2l = 0;
-	while (s1[s1l])
-		str[s2l++] = s1[s1l++];
-	s1l = 0;
-	while (s2[s1l])
-		str[s2l++] = s2[s1l++];
-	str[s2l] = '\0';
-	return (str);
+	if (!s1 || !s2)
+		return (0);
+	new_str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!new_str)
+		return (NULL);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		new_str[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (s2[j] != '\0')
+		new_str[i++] = s2[j++];
+	new_str[i] = '\0';
+	return (new_str);
 }
-// Stringleri arka arkaya ekliyor.
+// s1 ve s2 yi birlestirir yeni bir string olusturur return eder
+/*
+#include<stdio.h>
+
+int	main()
+{
+	char s1[] = "beyza";
+	char s2[] = "tekinli";
+	printf("%s", ft_strjoin(s1, s2));
+}*/
