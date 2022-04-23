@@ -14,13 +14,22 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*c;
+	t_list	*first;
 
-	c = (t_list *)malloc(sizeof(t_list));
-	if (!c)
+	first = malloc(sizeof(*first));
+	if (!first)
 		return (NULL);
-	c->content = content;
-	c->next = NULL;
-	return (c);
+	first->content = content;
+	first->next = NULL;
+	return (first);
 }
-// Linked Liste yeni eleman ekler.
+// Yeni element oluşturmamızı sağlar
+/*
+#include <stdio.h>
+
+int main() {
+	t_list *newElement;
+	newElement = "beyza";
+	printf("%s", ft_lstnew(newElement->next));
+}
+*/
