@@ -18,7 +18,7 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-// harf olup olmadığını kontrol eder
+// alfabetik bir karakter olup olmadığını kontrol eder.
 /*
 #include <stdio.h>
 
