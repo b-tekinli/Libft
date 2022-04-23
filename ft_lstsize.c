@@ -14,14 +14,25 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (lst)
+	while (lst != NULL)
 	{
 		lst = lst->next;
 		i++;
 	}
 	return (i);
 }
-// Linked List'in uzunluğunu verir.
+// listenin uzunluğunu verir
+/*
+#include <stdio.h>
+
+int main() {
+	t_list *bir = ft_lstnew("beyza");
+	t_list *iki = ft_lstnew("42");
+    bir->next = iki;
+	iki->next = NULL;
+	printf("%d", ft_lstsize(bir));
+}
+*/
