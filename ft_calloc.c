@@ -14,26 +14,19 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*memory;
-	size_t	i;
+	void	*p;
 
-	memory = malloc(count * size);
-	if (!memory)
+	p = malloc(count * size);
+	if (p == NULL)
 		return (NULL);
-	i = 0;
-	while (i < count * size)
-	{
-		memory[i] = 0;
-		i++;
-	}
-	return (memory);
+	ft_bzero(p, size * count);
+	return (p);
 }
 // belleği ayırır ve bayt değerlerini 0 ile doldurur.
 /*
-#include <stdio.h>
+#include<stdio.h>
 
 int	main()
 {
 	printf("%p", ft_calloc(10, 30));
-}
-*/
+}*/
