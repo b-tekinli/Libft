@@ -27,7 +27,6 @@ size_t	ft_strlen(const char *str)
 
 int main() {
 	char *b = "beyza";
-	int a = ft_strlen(b);
-	printf("%d", a);
+	printf("%d", ft_strlen(b););
 }
 */
