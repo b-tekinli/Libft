@@ -12,24 +12,20 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
-	if (!s && !d)
-		return (d);
-	if (s < d)
-		while (len--)
-			d[len] = s[len];
-	else
-		while (len--)
-			*d++ = *s++;
+	if (!dst && !src)
+		return (NULL);
+	if (dst < src)
+		ft_memcpy(dst, src, n);
+	else if (dst > src)
+	{
+		while (n--)
+			*((unsigned char *)(dst + n)) = *((unsigned char *)(src + n));
+	}
 	return (dst);
 }
-// hafıza alanının istediğimiz kadarını kopyalar
+// hafıza alanının istediğimiz kadarını taşır.
 /*
 #include <stdio.h>
 
