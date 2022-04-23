@@ -12,19 +12,18 @@
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (s)
-		while (*s != '\0')
-			ft_putchar_fd(*s++, fd);
-	ft_putchar_fd('\n', fd);
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
-// ‘s’ string çıktısını sonunda new line karakteri ile birlikte verilen file descriptora yazar.
+// ‘s’ stringini verilen file descriptor içerisine yazar.
 /*
 #include <fcntl.h>
+
 int main() {
-	int fd = open("putendl.txt", O_CREAT | O_RDWR, 0777);
-	ft_putendl_fd("beyza", fd);
-	ft_putendl_fd("42", fd);
+	int fd = open("putstr.txt", O_CREAT | O_RDWR, 0777);
+	ft_putstr_fd('beyza', fd);
 }
 */
