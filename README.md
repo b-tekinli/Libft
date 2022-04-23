@@ -49,7 +49,7 @@ ft_substr - bir dizgeden bir alt dizgi döndürür. <br />
 ft_strjoin - iki dizeyi birleştirir. <br />
 ft_strtrim - belirli karakter kümesiyle dizenin başlangıcını ve sonunu keser. <br />
 ft_split - parametre olarak bir karakter kullanarak bir dizeyi böler. <br />
-ft_itoa - bir sayıyı dizeye dönüştürür. <br />
+ft_itoa - integer'ı ascii'ye çevirir. <br />
 ft_strmapi - bir dizgenin her karakterine bir işlev uygular. <br />
 ft_striteri - bir dizgenin her karakterine bir işlev uygular. <br />
 ft_putchar_fd - bir dosya tanıtıcısına bir karakter çıktısı. <br />
