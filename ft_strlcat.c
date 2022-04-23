@@ -16,22 +16,40 @@
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-	size_t	i;
-	size_t	dsize;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	dlen;
+	unsigned int	slen;
 
-	dsize = 0;
-	while (dest[dsize] && dsize < size)
-		dsize++;
-	i = dsize;
-	while (src[dsize - i] && dsize + 1 < size)
+	i = 0;
+	j = 0;
+	while (dest[j] != '\0')
 	{
-		dest[dsize] = src[dsize - i];
-		dsize++;
+		j++;
 	}
-	if (i < size)
-		dest[dsize] = '\0';
-	return (i + ft_strlen(src));
+	dlen = j;
+	slen = ft_strlen(src);
+	if (size == 0 || size <= dlen)
+		return (slen + size);
+	while (src[i] != '\0' && i < size - dlen - 1)
+	{
+		dest[j] = src[i];
+		i++;
+		j++;
+	}
+		dest[j] = '\0';
+	return (dlen + slen);
 }
 // İki dizeyi birleştiriyor.
+/*
+#include <stdio.h>
+int main()
+{
+	char src[20] = "beyza";
+	char dest[] = "42";
+
+	printf("%zu - %s", ft_strlcat(dest, src, 6), dest);
+	return 0;
+}*/
