@@ -25,4 +25,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i--;
 	return (ft_substr(s1, 0, i + 1));
 }
-// belirli karakter kümesiyle dizenin başlangıcını ve sonunu keser.
+// belirli karakter kümesiyle dizenin başlangıcını ve sonunu kırpar.
+/*
+#include<stdio.h>
+
+int main()
+{
+     char  s[] = "**#*beyza**";
+     char t[]= "**";
+     printf("%s", ft_strtrim(s, t));
+}
+*/
