@@ -12,30 +12,40 @@
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
 {
+	t_list	*first;
 	t_list	*new;
-	t_list	*p_new;
-	t_list	*p_old;
 
-	if (!lst)
+	if (lst == NULL || f == NULL)
 		return (NULL);
-	new = ft_lstnew((*f)(lst->content));
-	if (!new)
-		return (NULL);
-	p_new = new;
-	p_old = lst->next;
-	while (p_old)
+	first = NULL;
+	while (lst)
 	{
-		p_new->next = ft_lstnew((*f)(p_old->content));
-		if (!p_new)
+		new = ft_lstnew((*f)(lst->content));
+		if (!new)
 		{
-			ft_lstclear(&new, del);
+			ft_lstclear(&first, del);
 			return (NULL);
 		}
-		p_new = p_new->next;
-		p_old = p_old->next;
+		ft_lstadd_back(&first, new);
+		lst = lst->next;
 	}
-	return (new);
+	return (first);
 }
-// Linked Listede filtreleme yapar.
+// ’lst’ üzerinde gezer ve ‘f’ fonksiyonunu her eleamana uygular 
+// f uygulanan her elemandan yeni liste oluşturur
+// gerekli durumlarda del kullanılarak content temizlenir
+/*
+void f(void *str) {
+    printf("%s", str);
+}
+
+int main() {
+    t_list *bir = ft_lstnew("beyza");
+    t_list *iki = ft_lstnew("42");
+    bir->next = iki;
+    iki->next = "NULL";
+    ft_lstmap(&bir, f, &f);
+}
+*/
