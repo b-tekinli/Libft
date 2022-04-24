@@ -14,12 +14,23 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!f)
-		return ;
-	while (lst)
+	while (lst != NULL)
 	{
-		(*f)(lst->content);
+		f(lst->content);
 		lst = lst->next;
 	}
 }
-// Linked Listenin 1 elemanına pointer atar.
+/*
+void	f(void *str)
+{
+	printf("%s\n", str);
+}
+// f fonksiyonu ile lst içinde gezer ve f'yi tüm elemanlara uygular
+int main()
+{
+	t_list *first = ft_lstnew("beyza");
+	t_list *second = ft_lstnew("42");
+	first->next = second;
+	second->next = NULL;
+	ft_lstiter(first, &f);
+}*/
