@@ -16,13 +16,24 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	if (!del || !lst || !*lst)
+	if (!lst || !*lst || !del)
 		return ;
-	while (lst && *lst)
+	while (*lst)
 	{
 		tmp = (*lst)->next;
 		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
 }
-// Linked Listenin 1 elemanını siliyor.
+/*
+void f(void *str)
+{
+	printf("%s", str);
+}
+// ’del’ ve free(3) kullanarak elemanı siler ve tüm successorlarını da temizler.
+int main(void)
+{
+	t_list *first = ft_lstnew("beyza");
+	ft_lstclear(&first, &f);
+}
+*/
