@@ -20,10 +20,11 @@ void ft_bzero(void *s, size_t n)
 // bayt'ı (s) n'e kadar 0 ile doldurur
 /*
 #include <stdio.h>
+
 int main()
 {
 	char s[] = "beyza";
 	ft_bzero(s, 0);
 	printf("%s", s);
-	
-}*/
+}
+*/
