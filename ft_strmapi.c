@@ -31,7 +31,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-// f’ fonksiyonunu ‘s’ stringinin bütün karakterlerine uygular. Değiştirlen stringden yeni bir string yaratılır.
+// f’ fonksiyonunu ‘s’ stringinin bütün karakterlerine uygular. 
+// Değiştirlen stringden yeni bir string yaratılır.
 /*
 char	ft_putstr(unsigned int i, char s)
 {
@@ -40,7 +41,6 @@ char	ft_putstr(unsigned int i, char s)
 	else
 		return (s);
 }
-
 #include <stdio.h>
 int main() {
 	char *b = "beyza";
