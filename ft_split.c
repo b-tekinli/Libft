@@ -75,7 +75,8 @@ char	**ft_split(char const *s, char c)
 	res[res_i] = 0;
 	return (res);
 }
-// listeyi belirtilen ayıracı kullanarak yeniden döndürür. Karakter dizilerini istenen şekilde böler.
+// listeyi belirtilen ayıracı kullanarak yeniden döndürür. 
+// Karakter dizilerini istenen şekilde böler.
 /*
 #include <stdio.h>
 int	main()
