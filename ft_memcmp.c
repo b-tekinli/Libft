@@ -29,10 +29,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-// adreslerin ascii tablosundaki farkını alır. strncmp ise str adresini kontrol eder
+
 /*
 #include<stdio.h>
-
+adreslerin ascii tablosundaki farkını alır. strncmp ise str adresini kontrol eder
 int main() {
 	char a[] = "beyza";
 	char b[] = "beyzaB";
