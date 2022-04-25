@@ -19,7 +19,8 @@ void	ft_putendl_fd(char const *s, int fd)
 			ft_putchar_fd(*s++, fd);
 	ft_putchar_fd('\n', fd);
 }
-// ‘s’ string çıktısını sonunda new line karakteri ile birlikte verilen file descriptora yazar.
+// ‘s’ string çıktısını sonunda new line karakteriyle
+// verilen file descriptora yazar.
 /*
 #include <fcntl.h>
 int main() {
