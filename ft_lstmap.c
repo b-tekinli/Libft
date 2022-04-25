@@ -34,18 +34,25 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
 	return (first);
 }
 // ’lst’ üzerinde gezer ve ‘f’ fonksiyonunu her eleamana uygular 
-// f uygulanan her elemandan yeni liste oluşturur
+// f uygulanan her elemandan yeni bir node oluşturur
 // gerekli durumlarda del kullanılarak content temizlenir
 /*
 void f(void *str) {
     printf("%s", str);
 }
 
+void f_del(void *node) {
+	if(!node)
+		return ;
+	free(node);
+	return;
+}
+
 int main() {
     t_list *bir = ft_lstnew("beyza");
     t_list *iki = ft_lstnew("42");
     bir->next = iki;
-    iki->next = "NULL";
-    ft_lstmap(&bir, f, &f);
+    iki->next = NULL;
+    ft_lstmap(bir, f, f_del);
 }
 */
