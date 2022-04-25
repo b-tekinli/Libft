@@ -18,12 +18,12 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	free(lst);
 }
 
+// del f'unu kullanarak elemanın hafızadaki yerini temizler
+// next'in yeri temizlenmiş olmalıdır
 /*
 void f(void *str) {
 	printf("%s", str);
-}
-
-// del f'unu kullanarak elemanın hafızadaki yerini temizler. next'in yeri temizlenmiş olmalıdır
+} 
 
 int main() {
 	t_list *bir = ft_lstnew("bir");
