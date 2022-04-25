@@ -28,8 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(buf, s + start, len + 1);
 	return (buf);
 }
-// Malloc fonksiyonu kullanılarak memoryde hafıza ayırılır ve belirtilen substringi döner. 
-// Substring başlangıç indisinden başlar ve maksimum boyutuna kadar devam eder.
+// Malloc fonksiyonu kullanılarak memoryde hafıza ayırılır
+// ve belirtilen substringi döner.
 /*
 #include <stdio.h>
 
