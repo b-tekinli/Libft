@@ -29,7 +29,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (srclen);
 }
-// sc'den dst'e kadar kopyalar src'nin uzunluğunu return eder
+// src'den dst'e kadar kopyalar src'nin uzunluğunu return eder
 
 /*
 #include<stdio.h>
