@@ -17,7 +17,7 @@ static size_t	get_digits(int n)
 	size_t	count;
 
 	count = 0;
-	if (n < 0 || n == 0)
+	if (n <= 0)
 		count++;
 	while (n)
 	{
