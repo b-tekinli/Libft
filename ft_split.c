@@ -77,13 +77,15 @@ char	**ft_split(char const *s, char c)
 }
 // listeyi belirtilen ayıracı kullanarak yeniden döndürür. 
 // Karakter dizilerini istenen şekilde böler.
+
 /*
 #include <stdio.h>
 int	main()
 {
-	char	*str = "***beyza**42**dev";
+	char	*str = "***?beyza.42**dev";
 	char **splt;
 
 	splt = ft_split(str, '*');
 	printf("%s\n", splt[0]);
-}*/
+}
+*/
